@@ -115,13 +115,24 @@ npm run lint
 ## Project Structure
 
 ```
-Netflix-Clone/
-├── public/          # Static assets
-├── src/             # Application source (routes, components, lib)
-├── components.json  # shadcn/ui configuration
-├── next.config.mjs
-├── tailwind.config.* / postcss.config.mjs
-└── package.json
+├── app/
+│   ├── api/              # Server-side API routes
+│   ├── movies/           # Movie pages/routes
+│   ├── tv/               # TV show pages/routes
+│   ├── search/           # Search page
+│   ├── components/       # Page-specific components
+│   ├── layout.js/tsx     # Root layout
+│   └── page.js/tsx       # Home page
+│
+├── components/
+│   └── ui/               # shadcn/ui components
+│
+├── lib/                  # Utility functions / API helpers
+├── public/               # Static assets
+├── auth.js/ts            # Auth.js configuration
+├── next.config.*         # Next.js configuration
+├── package.json
+└── README.md
 ```
 
 ## Deployment
