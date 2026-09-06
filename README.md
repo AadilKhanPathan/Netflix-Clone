@@ -2,9 +2,19 @@
 
 A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies and TV shows in Netflix-style rows, hover to preview, open a details page with trailer, cast, and production info, and sign in with authentication.
 
-**Live demo:** https://netflix-clone-lyart-pi-52.vercel.app
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black) ![React](https://img.shields.io/badge/React-19-61DAFB) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8)
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
+
+<h2>Demo</h2>
+<a href="https://netflix-clone-3g80ozjqt-aadil-khan1.vercel.app/">
+  <img src="https://img.shields.io/badge/LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
 
 ## Features
 
