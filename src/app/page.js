@@ -9,9 +9,9 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <TitleCards Title="popular" category="popular"/>
-      <TitleCards Title="Blockbuster movies" category="top_rated"/>
+      {/* <TitleCards Title="Blockbuster movies" category="top_rated"/>
       <TitleCards Title="TV SHOWS" category="top_rated" type="tv"/>
-      <TitleCards Title="Only on netflix" category="upcoming" type="movie"/>
+      <TitleCards Title="Only on netflix" category="upcoming" type="movie"/> */}
       <Footer/>
   </div>
   );
