@@ -16,6 +16,23 @@ A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies 
   <img src="https://img.shields.io/badge/LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
+## home page
+<img width="1899" height="839" alt="image" src="https://github.com/user-attachments/assets/733263da-8114-4273-a731-10a4e0ec6051" />
+<img width="1900" height="939" alt="image" src="https://github.com/user-attachments/assets/010b0a80-160d-41cd-9a34-91d1252d2fb1" />
+<img width="1899" height="950" alt="image" src="https://github.com/user-attachments/assets/ad2c0444-7d1a-40d9-a997-900b1d793782" />
+
+## details page
+<img width="1901" height="922" alt="image" src="https://github.com/user-attachments/assets/6b6a9cf4-f80d-4295-b113-f33053dfe79c" />
+<img width="1899" height="1026" alt="image" src="https://github.com/user-attachments/assets/1ef70015-8edd-4203-ade3-4803f706fc56" />
+<img width="1905" height="898" alt="image" src="https://github.com/user-attachments/assets/3d8974d6-22d2-4b4a-b875-dfe485c284d6" />
+<img width="1896" height="940" alt="image" src="https://github.com/user-attachments/assets/19bdc9dd-13cd-4210-9188-36c7fd31c565" />
+
+
+
+
+
+
+
 ## Features
 
 - 🏠 **Home page** with a hero banner and horizontally-scrolling rows (Popular, TV Shows, Only on Netflix, etc.)
