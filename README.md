@@ -17,6 +17,8 @@ A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies 
 </a>
 
 ## home page
+<img width="1763" height="3139" alt="Screenshot_7-9-2026_12267_netflix-clone-lyart-pi-52 vercel app" src="https://github.com/user-attachments/assets/a77d731b-6681-4d1d-9d97-5dc3e5c162b3" />
+
 <img width="1899" height="839" alt="image" src="https://github.com/user-attachments/assets/733263da-8114-4273-a731-10a4e0ec6051" />
 <img width="1900" height="939" alt="image" src="https://github.com/user-attachments/assets/010b0a80-160d-41cd-9a34-91d1252d2fb1" />
 <img width="1899" height="950" alt="image" src="https://github.com/user-attachments/assets/ad2c0444-7d1a-40d9-a997-900b1d793782" />
