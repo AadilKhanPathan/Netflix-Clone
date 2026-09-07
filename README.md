@@ -117,16 +117,36 @@ npm run lint
 
 ```
 ├── app/
-│   ├── api/              # Server-side API routes
-│   ├── movies/           # Movie pages/routes
-│   ├── tv/               # TV show pages/routes
-│   ├── search/           # Search page
-│   ├── components/       # Page-specific components
-│   ├── layout.js/tsx     # Root layout
-│   └── page.js/tsx       # Home page
+│   ├── actor/
+│   │      └── [name]/
+│   │            └── page.jsx        # Actor detail page
+│   ├── api/
+│   |    └── auth/
+│   |         └── [...nextauth]/
+│   |                    └── route.js    # NextAuth route
+│   ├── components/
+|   |    ├── Footer
+|   |    ├── Hero
+│   │    ├── Navbar
+|   |    ├── TitleCards
+|   |    └── movie
+|   |          ├── Cast
+|   |          ├── Content
+|   |          ├── Trailer
+|   |          ├── Photos
+|   |          └── Reviews
+|   |
+│   ├── details/
+│   │       └── [id]/
+│   │             └── page.jsx
+|   | 
+│   | 
+│   ├── layout.jsx        # Root layout
+│   └── page.jsx          # Home page
 │
 ├── components/
-│   └── ui/               # shadcn/ui components
+|      ├── tmdb.js        # all api calls
+│      └── ui/            # shadcn/ui components
 │
 ├── lib/                  # Utility functions / API helpers
 ├── public/               # Static assets
