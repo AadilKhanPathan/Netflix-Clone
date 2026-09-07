@@ -21,13 +21,11 @@ A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies 
 
 
 ## details page
-<img width="1763" height="4673" alt="image" src="https://github.com/user-attachments/assets/effcb456-2181-43ef-9909-f1d0dc51c331" />
-<img width="1763" height="4673" alt="image" src="https://github.com/user-attachments/assets/0fa01922-3eec-4290-8afb-725bd20e0371" />
+<img width="1763" height="3516" alt="image" src="https://github.com/user-attachments/assets/06547f48-03ff-4c00-bb30-3b8f6c854cea" />
 
-<img width="1901" height="922" alt="image" src="https://github.com/user-attachments/assets/6b6a9cf4-f80d-4295-b113-f33053dfe79c" />
-<img width="1899" height="1026" alt="image" src="https://github.com/user-attachments/assets/1ef70015-8edd-4203-ade3-4803f706fc56" />
-<img width="1905" height="898" alt="image" src="https://github.com/user-attachments/assets/3d8974d6-22d2-4b4a-b875-dfe485c284d6" />
-<img width="1896" height="940" alt="image" src="https://github.com/user-attachments/assets/19bdc9dd-13cd-4210-9188-36c7fd31c565" />
+## actor details
+<img width="1763" height="2157" alt="image" src="https://github.com/user-attachments/assets/73101ca0-3c25-4faa-bfd1-76f00881d56a" />
+
 
 
 
