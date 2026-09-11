@@ -164,6 +164,3 @@ This project is set up to deploy easily on [Vercel](https://vercel.com/new), the
 
 This is a fan-made clone built for learning purposes. It uses the Netflix name/branding for educational/demo purposes only and is not affiliated with, endorsed by, or connected to Netflix, Inc. All movie/TV data and artwork belong to their respective owners.
 
-## License
-
-No license specified yet — consider adding one (e.g. MIT) if you plan to open this up for contributions.
