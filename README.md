@@ -16,14 +16,14 @@ A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies 
   <img src="https://img.shields.io/badge/LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
-## home page
+## Home page
 <img width="1763" height="3139" alt="Screenshot_7-9-2026_12267_netflix-clone-lyart-pi-52 vercel app" src="https://github.com/user-attachments/assets/a77d731b-6681-4d1d-9d97-5dc3e5c162b3" />
 
 
-## details page
+## Details page
 <img width="1763" height="3516" alt="image" src="https://github.com/user-attachments/assets/06547f48-03ff-4c00-bb30-3b8f6c854cea" />
 
-## actor details
+## Actor details
 <img width="1763" height="2157" alt="image" src="https://github.com/user-attachments/assets/73101ca0-3c25-4faa-bfd1-76f00881d56a" />
 
 
