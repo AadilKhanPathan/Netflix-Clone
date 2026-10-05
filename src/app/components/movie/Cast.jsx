@@ -20,6 +20,7 @@ export default function Cast({cast}) {
                   alt={actor.name}
                   width={100}
                   height={100}
+                  unoptimized
                   className="w-24 h-24 object-cover rounded-full ring-2 ring-transparent group-hover:ring-primary transition-all duration-300 transform group-hover:scale-105"
                 />
               ) : (

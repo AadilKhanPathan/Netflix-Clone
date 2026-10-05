@@ -70,6 +70,7 @@ export default async function ActorDetailsPage({ params }) {
               <Image
                 src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
                 alt={actor.name}
+                unoptimized
                 width={220}
                 height={220}
                 className="w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-2xl shadow-lg border border-border"
@@ -177,7 +178,7 @@ export default async function ActorDetailsPage({ params }) {
             )}
 
             {/* Biography */}
-            <div className="mt-6">
+            <div className="mt-6 mb-5">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-2">
                 Biography
               </h2>
@@ -215,6 +216,7 @@ export default async function ActorDetailsPage({ params }) {
                       src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                       alt={movie.title}
                       fill
+                      unoptimized
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

@@ -20,6 +20,7 @@ export default function Content({ content, type, available }) {
           src={`https://image.tmdb.org/t/p/original${content.backdrop_path}`}
           alt={type == "movie" ? content.title : content.name}
           fill
+          unoptimized
           priority
           className="object-cover"
         />

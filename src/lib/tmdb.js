@@ -90,3 +90,12 @@ export async function getTrailer(id, type) {
 
   return OfficialTrailer;
 }
+
+export async function getRecommendations(id, type) {
+  const res = await fetch(`https://api.themoviedb.org/3/${type}/${id}/recommendations?language=en-US&page=1`, options);
+
+  const data = await res.json();
+
+  console.log(data.results.slice(0, 10));
+  return data.results.slice(0, 10);
+}

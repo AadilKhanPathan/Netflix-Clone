@@ -9,6 +9,7 @@ export default function Photos({ photos }) {
             <Image
               key={p.file_path}
               src={`https://image.tmdb.org/t/p/w342${p.file_path}`}
+              unoptimized
               className="hover:scale-125 duration-300 hover:rounded border"
               width={400}
               height={100}
