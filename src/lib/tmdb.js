@@ -1,69 +1,47 @@
-const options = {
-  method: "GET",
+import axios from "axios";
+
+const tmdb = axios.create({
+  baseURL: "https://api.themoviedb.org/3",
   headers: {
     accept: "application/json",
     Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
   },
-};
+  params: {
+    language: "en-US",
+  },
+});
 
 export async function getMovie(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}?language=en-US`,
-    options,
-  );
-
-  const data = await res.json();
-  console.log(data);
+  const { data } = await tmdb.get(`/${type}/${id}`);
   return data;
 }
 
 export async function watchProvider(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/watch/providers`,
-    options,
-  );
+  const { data } = await tmdb.get(`/${type}/${id}/watch/providers`);
 
-  const data = await res.json();
   const country = data.results?.IN;
+
   const flatrate = country?.flatrate || [];
 
   return flatrate;
 }
 
 export async function getCast(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/credits?language=en-US`,
-    options,
-  );
+  const { data } = await tmdb.get(`/${type}/${id}/credits`);
 
-  const data = await res.json();
-
-  console.log(data.cast.slice(0, 10));
+  console.log(data.cast.slice(0, 12));
 
   return data.cast.slice(0, 12);
 }
 
 export async function getreviews(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/reviews?language=en-US&page=1`,
-    options,
-  );
-  const data = await res.json();
+  const { data } = await tmdb.get(`/${type}/${id}/reviews`);
 
   return data.results;
 }
 
 export async function getphotos(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/images`,
-    options,
-  );
-
-  if (!res.ok) {
-    console.log("failed to fetch the data");
-  }
-
-  const data = await res.json();
+  const { data } = await tmdb.get(`/${type}/${id}/images`);
 
   if (type === "movie") {
     return data.posters.filter((p) => p.iso_639_1 == "en").slice(1, 11);
@@ -75,12 +53,8 @@ export async function getphotos(id, type) {
 }
 
 export async function getTrailer(id, type) {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/videos?language=en-US`,
-    options,
-  );
+  const { data } = await tmdb.get(`/${type}/${id}/videos`);
 
-  const data = await res.json();
   const videos = data.results || [];
 
   const OfficialTrailer = videos.find(
@@ -92,10 +66,18 @@ export async function getTrailer(id, type) {
 }
 
 export async function getRecommendations(id, type) {
-  const res = await fetch(`https://api.themoviedb.org/3/${type}/${id}/recommendations?language=en-US&page=1`, options);
-
-  const data = await res.json();
+  const { data } = await tmdb.get(`/${type}/${id}/recommendations`);
 
   console.log(data.results.slice(0, 10));
   return data.results.slice(0, 10);
+}
+
+export async function getSearch(query) {
+  const { data } = await tmdb.get("/search/multi", {
+    params: { query, include_adult: false },
+  });
+
+  console.log(data);
+
+  return data;
 }
