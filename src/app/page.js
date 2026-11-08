@@ -8,11 +8,11 @@ export default function Home() {
     <div>
       <Navbar/>
       <Hero/>
-      <TitleCards Title="popular" category="popular"/>
-      <TitleCards Title="Blockbuster movies" category="top_rated"/>
+      <TitleCards Title="Popular" category="popular"/>
+      <TitleCards Title="Blockbuster Movies" category="top_rated"/>
       <TitleCards Title="TV SHOWS" category="top_rated" type="tv"/>
-      <TitleCards Title="airing_today" category="airing_today" type="tv"/>
-      <TitleCards Title="Only on netflix" category="upcoming" type="movie"/>
+      <TitleCards Title="Airing Today" category="airing_today" type="tv"/>
+      <TitleCards Title="Only on Netflix" category="upcoming" type="movie"/>
       <Footer/>
   </div>
   );
