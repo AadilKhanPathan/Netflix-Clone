@@ -7,7 +7,6 @@ getphotos,
   getTrailer,
   getRecommendations,
 } from "../../../lib/tmdb";
-import TitleCards from "../../../app/components/TitleCards";
 import Content from "../../../app/components/movie/Content";
 import Cast from "../../../app/components/movie/Cast";
 import Reviews from "../../../app/components/movie/Reviews";
@@ -39,7 +38,9 @@ export default async function MovieDetailsPage({ params, searchParams }) {
       <Content content={content} type={type} available={availableOn} />
 
       {/* Photo */}
-      {/* <Photos photos={photos} /> */}
+      <Photos photos={photos} />
+
+      {/* Recommendations */}
       <Recommendations data={recommendations}/>
 
       {/* CAST */}
