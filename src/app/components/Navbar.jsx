@@ -14,6 +14,7 @@ import {
 import { Button } from "../../components/ui/button";
 import { useState } from "react";
 import { Input } from "../../components/ui/input";
+import SearchBar from "./Features/Search";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -53,7 +54,7 @@ export default function Navbar() {
       {/* Right: search, kids, bell, profile */}
       <div className="flex items-center gap-4 text-white">
         {open ? (
-          <Input
+          <SearchBar
           className={`transition-all duration-300 ease-in-out overflow-hidden rounded-none ${open ? "w-50 opacity-100 px-2 border border-solid border-white outline-none" : "w-0 opacity-0 px-0 border-none"}`}
             type="text"
             placeholder="Search your movie"

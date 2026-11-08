@@ -1,23 +1,12 @@
-import axios from "axios";
-
-const tmdb = axios.create({
-  baseURL: "https://api.themoviedb.org/3",
-  headers: {
-    accept: "application/json",
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
-  },
-  params: {
-    language: "en-US",
-  },
-});
+import { api } from "./api";
 
 export async function getMovie(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}`);
+  const { data } = await api.get(`/${type}/${id}`);
   return data;
 }
 
 export async function watchProvider(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/watch/providers`);
+  const { data } = await api.get(`/${type}/${id}/watch/providers`);
 
   const country = data.results?.IN;
 
@@ -27,7 +16,7 @@ export async function watchProvider(id, type) {
 }
 
 export async function getCast(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/credits`);
+  const { data } = await api.get(`/${type}/${id}/credits`);
 
   console.log(data.cast.slice(0, 12));
 
@@ -35,13 +24,13 @@ export async function getCast(id, type) {
 }
 
 export async function getreviews(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/reviews`);
+  const { data } = await api.get(`/${type}/${id}/reviews`);
 
   return data.results;
 }
 
 export async function getphotos(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/images`);
+  const { data } = await api.get(`/${type}/${id}/images`);
 
   if (type === "movie") {
     return data.posters.filter((p) => p.iso_639_1 == "en").slice(1, 11);
@@ -53,7 +42,7 @@ export async function getphotos(id, type) {
 }
 
 export async function getTrailer(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/videos`);
+  const { data } = await api.get(`/${type}/${id}/videos`);
 
   const videos = data.results || [];
 
@@ -66,14 +55,14 @@ export async function getTrailer(id, type) {
 }
 
 export async function getRecommendations(id, type) {
-  const { data } = await tmdb.get(`/${type}/${id}/recommendations`);
+  const { data } = await api.get(`/${type}/${id}/recommendations`);
 
   console.log(data.results.slice(0, 10));
   return data.results.slice(0, 10);
 }
 
 export async function getSearch(query) {
-  const { data } = await tmdb.get("/search/multi", {
+  const { data } = await api.get("/search/multi", {
     params: { query, include_adult: false },
   });
 

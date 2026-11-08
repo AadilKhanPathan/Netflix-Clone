@@ -2,24 +2,12 @@ import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import Image from "next/image";
 import Link from "next/link";
 import netflix_logo from "../assets/netflix_logo.png";
+import { api } from "../../lib/api";
 
 async function getData(category, type) {
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
-    },
-  };
+  const { data } = await api.get(`/${type}/${category}`);
 
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${type}/${category}?language=en-US&page=1`,
-    options,
-  );
-
-  const data = await res.json();
   return data.results;
-
 }
 
 export default async function TitleCards({
