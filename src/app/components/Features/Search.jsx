@@ -57,7 +57,7 @@ export default function SearchBar() {
 
       {/* Search Results */}
       {query.trim() && (
-        <div className="absolute top-full z-50 mt-2 max-h-96 w-full overflow-y-auto rounded-lg border border-gray-700 bg-[#141414] p-3 shadow-xl">
+        <div className="absolute top-full z-50 mt-2 max-h-96 w-full overflow-y-auto rounded-lg border border-gray-700 bg-[#141414] p-3 shadow-xl no-scrollbar ">
           {!loading && results.length === 0 && (
             <p className="py-5 text-center text-gray-400">No results found</p>
           )}
