@@ -83,13 +83,13 @@ export default function Content({ content, type, available }) {
             </div>
 
             {/* Overview */}
-            <p className="paragragh text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mb-8">
+            <p className="paragraph text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mb-8">
               {content.overview}
             </p>
 
             {/* Actions */}
             <div className="flex flex-wrap gap-3">
-              <button className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2.5 rounded hover:bg-white/90 transition-colors">
+              <button className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2.5 rounded hover:bg-white/90 transition-colors cursor-pointer">
                 ▶ Trailer
               </button>
               <button className="flex items-center gap-2 bg-white/20 text-white font-semibold px-6 py-2.5 rounded hover:bg-white/30 transition-colors backdrop-blur-sm">
