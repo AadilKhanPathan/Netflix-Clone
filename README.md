@@ -12,7 +12,7 @@ A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies 
 
 
 <h2>Demo</h2>
-<a href="https://netflix-clone-3g80ozjqt-aadil-khan1.vercel.app/">
+<a href="https://netflix-clone-git-main-aadil-khan1.vercel.app/">
   <img src="https://img.shields.io/badge/LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
