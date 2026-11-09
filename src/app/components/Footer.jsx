@@ -73,7 +73,7 @@ export default function Footer() {
               Explore
             </h3>
 
-            <div className="flex flex-col gap-3 text-sm text-gray-400">
+            <div className="grid grid-cols-2 gap-3 text-sm text-gray-400">
               <Link href="/" className="transition hover:text-white">
                 Home
               </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
               Information
             </h3>
 
-            <div className="flex flex-col gap-3 text-sm text-gray-400">
+            <div className="grid grid-cols-2 gap-3 text-sm text-gray-400">
               <Link href="/about" className="transition hover:text-white">
                 About Us
               </Link>
@@ -125,38 +125,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Stay Updated
-            </h3>
-
-            <p className="mb-4 text-sm leading-6 text-gray-400">
-              Get the latest movie releases and recommendations.
-            </p>
-
-            <div className="flex overflow-hidden rounded-lg border border-white/10 bg-white/5">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-gray-500"
-              />
-
-              <button
-                type="button"
-                className="bg-red-800 px-4 text-white transition hover:bg-red-700 hover:cursor-pointer"
-                aria-label="Subscribe"
-              >
-                <Mail size={18} />
-              </button>
-            </div>
-          </div>
+          
         </div>
 
         {/* Bottom Section */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} CINEMAX. All rights reserved.
+            © {new Date().getFullYear()} Netflix. All rights reserved.
           </p>
 
           <p className="flex items-center gap-1">
