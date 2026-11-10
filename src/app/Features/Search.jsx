@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 import { Search, X, Loader2 } from "lucide-react";
 import searchicon from "../assets/search_icon.svg";
 import Link from "next/link.js";
-import { getSearch } from "../../lib/tmdb";
 import Image from "next/image.js";
+import { getSearch } from "../../lib/tmdb";
 
 export default function SearchBar({ open, setOpen }) {
   const [query, setQuery] = useState("");
-
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -23,6 +22,7 @@ export default function SearchBar({ open, setOpen }) {
         const data = await getSearch(query);
 
         setResults(data.results);
+        console.log(data)
       } catch (error) {
         console.error(error);
         setResults([]);
@@ -35,7 +35,7 @@ export default function SearchBar({ open, setOpen }) {
   }, [query]);
 
   return (
-    <div className="relative ">
+    <div className="relative">
       {open ? (
         <div className="flex items-center gap-3 rounded-lg border border-gray-600 bg-black px-4 py-3 w-xs">
           <Search className="text-gray-400" />
@@ -45,7 +45,6 @@ export default function SearchBar({ open, setOpen }) {
             placeholder="Search movies and TV shows..."
             value={query}
             autoFocus
-            onBlur={() => setOpen(false)}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full bg-transparent text-white outline-none"
           />
@@ -80,6 +79,7 @@ export default function SearchBar({ open, setOpen }) {
             <Link
               key={`${movie.media_type}-${movie.id}`}
               href={`/details/${movie.id}?type=${movie.media_type}`}
+              
               className="flex cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-white/10"
             >
               {movie.poster_path ? (
