@@ -15,6 +15,7 @@ import { Button } from "../../components/ui/button";
 import { useState } from "react";
 import { Input } from "../../components/ui/input";
 import SearchBar from "../Features/Search";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,12 +35,11 @@ export default function Navbar() {
 
         <ul className="hidden md:flex items-center gap-5 text-sm text-white">
           <li className="font-semibold cursor-pointer">Home</li>
-          <li className="text-gray-300 hover:text-gray-400 cursor-pointer">
-            TV Shows
-          </li>
-          <li className="text-gray-300 hover:text-gray-400 cursor-pointer">
+          <Link href={"#TV SHOWS"} className="text-gray-300 hover:text-gray-400 cursor-pointer">TV Shows</Link>
+          
+          <Link href={"#Movies"} className="text-gray-300 hover:text-gray-400 cursor-pointer">
             Movies
-          </li>
+          </Link>
           <li className="text-gray-300 hover:text-gray-400 cursor-pointer">
             New & Popular
           </li>
