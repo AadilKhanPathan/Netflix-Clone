@@ -1,5 +1,5 @@
 import {
-getphotos,
+  getphotos,
   watchProvider,
   getreviews,
   getMovie,
@@ -18,30 +18,41 @@ export default async function MovieDetailsPage({ params, searchParams }) {
   const { id } = await params;
   const { type = "movie" } = await searchParams;
 
-  const [content, availableOn, trailers, reviews, photos, cast, recommendations] =
-    await Promise.all([
-      getMovie(id, type),
-      watchProvider(id, type),
-      getTrailer(id, type),
-      getreviews(id, type),
-      getphotos(id, type),
-      getCast(id, type),
-      getRecommendations(id, type),
-    ]);
+  const [
+    content,
+    availableOn,
+    trailers,
+    reviews,
+    photos,
+    cast,
+    recommendations,
+  ] = await Promise.all([
+    getMovie(id, type),
+    watchProvider(id, type),
+    getTrailer(id, type),
+    getreviews(id, type),
+    getphotos(id, type),
+    getCast(id, type),
+    getRecommendations(id, type),
+  ]);
 
-  if (!content) notFound(); 
+  if (!content) notFound();
 
   return (
     <div className="min-h-screen bg-black text-white">
-      
       {/* Details */}
-      <Content content={content} type={type} available={availableOn} />
+      <Content
+        content={content}
+        type={type}
+        available={availableOn}
+        trailers={trailers}
+      />
 
       {/* Photo */}
       <Photos photos={photos} />
 
       {/* Recommendations */}
-      <Recommendations data={recommendations}/>
+      <Recommendations data={recommendations} />
 
       {/* CAST */}
       <Cast cast={cast} />
