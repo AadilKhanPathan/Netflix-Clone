@@ -2,7 +2,7 @@ import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import Image from "next/image";
 import Link from "next/link";
 import netflix_logo from "../assets/netflix_logo.png";
-import { api } from "../../lib/api";
+import { api } from "../../lib/axios";
 
 async function getData(category, type) {
   const { data } = await api.get(`/${type}/${category}`);
@@ -18,7 +18,7 @@ export default async function TitleCards({
   const Details = await getData(category, type);
 
   return (
-    <div className="px-4 md:px-10 mb-10">
+    <div id={`${Title}`} className={`px-4 md:px-10 mb-10`}>
       <h2 className="text-lg md:text-xl font-semibold text-white mb-4 hover:text-white/80 transition-colors cursor-default">
         {Title}
       </h2>
