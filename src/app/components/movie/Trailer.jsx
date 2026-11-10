@@ -6,7 +6,7 @@ export default function Trailer({ trailers }) {
       {trailers && (
         <iframe
           className="aspect-video md:w-1/2 border-2 rounded"
-          src={`https://www.youtube.com/embed/${trailers.key}?autoplay=1`}
+          src={`https://www.youtube.com/embed/${trailers.key}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
@@ -14,3 +14,5 @@ export default function Trailer({ trailers }) {
     </div>
   );
 }
+
+//   src={`https://www.youtube.com/embed/${trailers.key}?autoplay=1`}
