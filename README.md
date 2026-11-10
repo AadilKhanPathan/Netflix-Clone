@@ -2,13 +2,12 @@
 
 A Netflix UI clone built with **Next.js 16** and **React 19** — browse movies and TV shows in Netflix-style rows, hover to preview, open a details page with trailer, cast, and production info, and sign in with authentication.
 
-
-![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
-![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green)
-
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Lucide React](https://img.shields.io/badge/Lucide_React-F56565?style=for-the-badge&logo=lucide&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 
 
 <h2>Demo</h2>
@@ -133,8 +132,12 @@ npm run lint
 |   |          ├── Cast
 |   |          ├── Content
 |   |          ├── Trailer
+|   |          ├── Recommendations
 |   |          ├── Photos
 |   |          └── Reviews
+|   |          
+|   ├── Features/
+|   |        └── Search
 |   |
 │   ├── details/
 │   │       └── [id]/
@@ -145,12 +148,14 @@ npm run lint
 │   └── page.jsx          # Home page
 │
 ├── components/
-|      ├── tmdb.js        # all api calls
-│      └── ui/            # shadcn/ui components
+|      └── ui/            # shadcn/ui components 
 │
-├── lib/                  # Utility functions / API helpers
+├── lib
+|    ├── tmdb.js        # all api calls
+|    └── api.js
+|     
 ├── public/               # Static assets
-├── auth.js/ts            # Auth.js configuration
+├── auth.js               # Auth.js configuration
 ├── next.config.*         # Next.js configuration
 ├── package.json
 └── README.md
