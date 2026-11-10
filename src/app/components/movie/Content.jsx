@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { ScrollArea, ScrollBar } from "../../../components/ui/scroll-area";
+import { useState } from "react";
 
-export default function Content({ content, type, available }) {
+export default function Content({ content, type, available, trailers }) {
+  const [showTrailer, setShowTrailer] = useState(false);
+  
   if (!content) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-black text-white">
@@ -89,13 +94,70 @@ export default function Content({ content, type, available }) {
 
             {/* Actions */}
             <div className="flex flex-wrap gap-3">
-              <button className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2.5 rounded hover:bg-white/90 transition-colors cursor-pointer">
+              <button
+                onClick={() => setShowTrailer(true)}
+                className="flex items-center gap-2 bg-white text-black font-semibold px-6 py-2.5 rounded hover:bg-white/90 transition-colors cursor-pointer"
+              >
                 ▶ Trailer
               </button>
               <button className="flex items-center gap-2 bg-white/20 text-white font-semibold px-6 py-2.5 rounded hover:bg-white/30 transition-colors backdrop-blur-sm">
                 + Add To My List
               </button>
             </div>
+
+            {/* Show Trailer */}
+            {showTrailer && (
+              <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+                {/* Modal */}
+                <div className="relative w-full max-w-4xl overflow-hidden rounded-lg border border-white/10 bg-[#141414] shadow-2xl">
+                  {/* Video Header */}
+                  <div className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
+                    {/* Video Name */}
+                    <div className="min-w-0">
+                      <p className="mb-1 text-xs font-medium uppercase tracking-widest text-red-500">
+                        Official Trailer
+                      </p>
+
+                      <h2 className="truncate text-lg font-semibold text-white sm:text-xl">
+                        {trailers?.name}
+                      </h2>
+                    </div>
+
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setShowTrailer(false)}
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 text-2xl transition-all hover:bg-white/20 hover:text-white cursor-pointer"
+                      aria-label="Close trailer"
+                    >
+                      &times;
+                    </button>
+                  </div>
+
+                  {/* YouTube Trailer */}
+                  <div className="aspect-video w-full bg-black">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube.com/embed/${trailers?.key}?autoplay=1`}
+                      title="Movie Trailer"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  {/* Video Footer */}
+                  <div className="flex items-center justify-between gap-3 px-5 py-3 text-xs text- sm:text-sm">
+                    <span className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-red-500" />
+                      YouTube
+                    </span>
+
+                    <span>
+                      Published: {trailers?.published_at?.slice(0, 10)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Available on */}
             {available && available.length > 0 && (
